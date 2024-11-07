@@ -8,7 +8,16 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Mi primera App de Angular';
-  subtitle = 'Esto va a ser duroh.';
-  contador = 10;
+  public title:string = 'Mi primera App de Angular';
+  public subtitle:string = 'Esto va a ser duroh.';
+  public contador:number = 10;
+
+  incrementarPor():void {
+    this.contador+=1
+  }
+
+  eliminarPor():void {
+    this.contador-=1
+  }
+
 }
