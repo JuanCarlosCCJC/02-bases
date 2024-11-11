@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { contadorComponent } from './contador/contador.component';
+import { HeroeComponent } from "./heroes/heroe/heroe.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [contadorComponent]        //Aqui añado el componente y asi lo puedo usar en el HTML
+  imports: [contadorComponent, HeroeComponent] //Aqui añado el componente y asi lo puedo usar en el HTML
 })
 export class AppComponent {
   public title:string = 'Mi primera App de Angular';
