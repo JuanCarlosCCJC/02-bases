@@ -9,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class HeroeComponent {
 
+  public nombre : String = 'Goku';
+  public edad : number = 32;
+
+  public get nombreCapitalizado():string {
+    return this.nombre.toUpperCase();
+  }
+
+  public getDescripcionHeroe(): string {
+    return `${this.nombre} - ${this.edad}`;
+  }
+
 }
