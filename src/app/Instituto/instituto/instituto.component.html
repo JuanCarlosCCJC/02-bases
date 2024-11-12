@@ -1,1 +1,145 @@
-<p>instituto works!</p>
+<head>
+<title>Ejercicio de Institutos</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(11, 78, 122);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: rgba(224, 235, 230, 0.778);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h1 {
+      color: #2c3e50;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: bold;
+      background: linear-gradient(90deg, #3498db, #8e44ad);
+      -webkit-background-clip: text;
+      color: transparent;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      padding: 10px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    h1:hover {
+      transform: scale(1.05);
+      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .info {
+      text-align: left;
+      margin: 10px 0;
+    }
+
+    .info td {
+      font-weight: bold;
+      color: #34495e;
+    }
+
+    .info dd {
+      margin-left: 10px;
+      font-size: 1.1rem;
+      color: #7f8c8d;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    img {
+      border-radius: 15px;
+      border: 4px solid #3498db;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    button:active {
+      transform: scale(0.98);
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="container">
+  <h1>EJERCICIO DE INSTITUTOS</h1>
+
+  <div class="info">
+    <table>
+      <tr>
+        <td>Nombre Instituto:</td>
+        <dd>{{colegios[bandera].nombre}}</dd>
+      </tr>
+      <tr>
+        <td>Localidad:</td>
+        <dd>{{colegios[bandera].localidad}}</dd>
+      </tr>
+      <tr>
+        <td>Familias profesionales:</td>
+        <dd>{{colegios[bandera].familiasProfesionales}}</dd>
+      </tr>
+      <tr>
+        <td>Centro:</td>
+        <dd>{{nombreCapitalizado()}}</dd>
+      </tr>
+    </table>
+  </div>
+
+  <p><strong>Imagen:</strong></p>
+
+  <div class="image-container">
+
+    <img src="{{colegios[bandera].logo}}" alt="Imagen del Instituto" width="200">
+  </div>
+
+  <button (click)="cambiarInstituto()">Cambiar Instituto</button>
+</div>
+
+</body>
+
+
