@@ -2,9 +2,17 @@
 
 <ul class="mt-2 list-group">
 
-  <!-- <li class="list-group-item" >Midoriya</li>
-  <li class="list-group-item">All Migth</li>
-  <li class="list-group-item">Tododoki</li> -->
+  <!--Esto es la impresion de la lista.-->
   <li *ngFor="let nombre of nombresHeroes" class="list-group-item">{{nombre}}</li>
+
+  <div *ngIf="heroeEliminado; else nadaQueBorrar">
+    <h3>Heroe eliminado : {{heroeEliminado}}</h3>
+  </div>
+
+  <ng-template #nadaQueBorrar>
+    <h1>No se ha eliminado ningún heroe.</h1>
+  </ng-template>
+
+  <button *ngIf="nombresHeroes.length>0" (click)="eliminaUltimoHeroe()" class="btn bt-outline-danger">Borrar último heroe</button>
 
 </ul>
