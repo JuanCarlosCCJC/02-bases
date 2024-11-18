@@ -16,5 +16,8 @@
 
 </dl>
 
-<button class="btn btn-primary">Cambiar nombre</button>
-<button class="btn btn-primary">Cambiar edad</button>
+<!-- Aqui usamos NGIF -->
+<button *ngIf="nombre === 'Goku'" (click)="cambiarNombre()" class="btn btn-primary">Cambiar nombre</button>
+<button *ngIf="edad === 32" (click)="cambiarEdad()" class="btn btn-primary">Cambiar edad</button>
+<button (click)="reestablecer()" class="btn btn-primary">Reestableces Valores.</button>
+
