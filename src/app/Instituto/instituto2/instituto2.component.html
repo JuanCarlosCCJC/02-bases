@@ -33,11 +33,11 @@
 <!-- Aqui tenemos los botones de atras y siguiente -->
 <div class="mt-3 text-center">
 
-  <button *ngIf="contador !== 0" class="btn btn-primary" (click)="anterior()">Atrás</button>
+  <button *ngIf="colegios[contador-1]" class="btn btn-primary" (click)="anterior()">Atrás</button>
 
   <p class="bg-info-subtle text-black py-1 mt-3">{{contador}}</p>
 
-  <button *ngIf="contador !== colegios.length" class="btn btn-primary" (click)="siguiente()">Siguiente</button>
+  <button *ngIf="colegios[contador+1]" class="btn btn-primary" (click)="siguiente()">Siguiente</button>
 
 </div>
 

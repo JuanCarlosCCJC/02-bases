@@ -80,7 +80,7 @@ export class Instituto2Component {
       this.pila.push(centroEliminado); //! Se agrega a la pila , para hacer esto he tenido que crear la interfaz colegio sino me daba error aqui.
 
       // Realizo esto para ajustar el contador, ya que si elimino y el contador es mayor al maximo no puedo ejecutar bien la apalicacionn luego.
-      if (this.contador > this.colegios.length) {
+      if (this.contador > 0) {
         this.contador--;
       }
 
