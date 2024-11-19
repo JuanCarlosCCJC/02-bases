@@ -37,12 +37,12 @@ export class Instituto2Component {
       nombre: 'Jesús Marín',
       localidad: 'Málaga',
       familiasProfesionales: ['Hostelería y Turismo'],
-      logo: 'logo-jacaranda.jpeg'
+      logo: 'logo-politecnico.jpeg'
     },{
       nombre: 'El divino pastor',
       localidad: 'Málaga',
       familiasProfesionales: ['Hostelería y Turismo'],
-      logo: 'logo-jacaranda.jpeg'
+      logo: 'logo-Divino.png'
     }
 
   ];
