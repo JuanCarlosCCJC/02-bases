@@ -10,7 +10,7 @@ import { Component } from "@angular/core";
   <button (click)="incrementarPor()">+{{x}}</button>
   <button (click)="eliminarPor()">-{{x}}</button>
   <button (click)="resetear()">Resetear</button>`,    //El template es el html por así decirlo
-  standalone: true,                                   //Para que pueda funcionar
+  standalone: false,                                   //Para que pueda funcionar
 
 })
 
