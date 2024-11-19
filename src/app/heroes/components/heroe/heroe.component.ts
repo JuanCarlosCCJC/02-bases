@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
-import {CommonModule} from '@angular/common'
 // Imporamos para poder usar el NGIF, todo lo que importemos aqui es para poder usarlo como directiva de NG en HTML
 
 @Component({
   selector: 'app-heroes-heroe',
-  standalone: true,
-  imports: [CommonModule],
+  standalone: false,
   templateUrl: './heroe.component.html',
   styleUrl: './heroe.component.css'
 })

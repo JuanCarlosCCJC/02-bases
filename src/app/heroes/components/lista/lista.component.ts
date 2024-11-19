@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-heroe-lista',
-  standalone: true,
-  imports: [CommonModule],
+  standalone: false,
   templateUrl: './lista.component.html',
   styleUrl: './lista.component.css'
 })

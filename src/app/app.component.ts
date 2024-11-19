@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 // import { contadorComponent } from './contador/components/contador.component';
 
-import { HeroeComponent } from "./heroes/heroe/heroe.component";
+import { ContadorModule } from './contador/contador.module';
+// import { HeroeComponent } from "./heroes/components/heroe/heroe.component";
+import { HeroesModule } from './heroes/heroes.module';
 import { InstitutoComponent } from "./Instituto/instituto/instituto.component";
 import { Instituto2Component } from "./Instituto/instituto2/instituto2.component";
-import { ListaComponent } from './heroes/lista/lista.component';
-import { ContadorModule } from './contador/contador.module';
+// import { ListaComponent } from './heroes/components/lista/lista.component';
+
+
 
 
 @Component({
@@ -14,7 +17,7 @@ import { ContadorModule } from './contador/contador.module';
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [ContadorModule,HeroeComponent, InstitutoComponent, ListaComponent, Instituto2Component] //Aqui añado el componente y asi lo puedo usar en el HTML
+  imports: [ContadorModule,HeroesModule,InstitutoComponent,Instituto2Component] //Aqui añado el componente y asi lo puedo usar en el HTML
  //Aqui añado el componente y asi lo puedo usar en el HTML
 })
 export class AppComponent {
