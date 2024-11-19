@@ -4,29 +4,56 @@
   </div>
 </header>
 
-<div class="container">
+<!-- Esto es la carta, aqui tenemos casi todo -->
+<!-- Pongo este if por que sino sale error de que no puede ser indefinido -->
+<div *ngIf="colegios[contador]" class="card container d-flex justify-content-center align-items-center mt-3" style="width: 18rem;">
 
-  <h1 class="bg-danger bg-gradient text-white py-3 text-center mt-3" >Centro</h1>
+  <img class="card-img-top" src={{colegios[contador].logo}} alt="Card image cap">
 
+  <div class="card-body">
 
+    <h5 class="card-title text-center">Centro</h5>
 
-  <p class="bg-success bg-gradient text-white py-3 text-center" >Nombre : {{colegios[contador].nombre}} ||| Localizacion : {{colegios[contador].localidad}}</p>
+    <ul>
+      <li>Nombre : {{colegios[contador].nombre}}</li>
+      <li>Localizacion : {{colegios[contador].localidad}}</li>
+    </ul>
+
+    <h5 class="card-title text-center">Familia Profesional</h5>
+
+    <ul class="mt-2 list-group" >
+      <!-- Aqui hago el ngfor -->
+      <li *ngFor="let nombre of colegios[contador].familiasProfesionales" class="list-group-item">{{nombre}}</li>
+    </ul>
+
+  </div>
 
 </div>
 
+<!-- Aqui tenemos los botones de atras y siguiente -->
 <div class="mt-3 text-center">
 
   <button *ngIf="contador !== 0" class="btn btn-primary" (click)="anterior()">Atrás</button>
 
   <p class="bg-info-subtle text-black py-1 mt-3">{{contador}}</p>
 
-  <button *ngIf="contador !== colegios.length -1 " class="btn btn-primary" (click)="siguiente()">Siguiente</button>
+  <button *ngIf="contador !== colegios.length " class="btn btn-primary" (click)="siguiente()">Siguiente</button>
 
 </div>
 
+<!-- Aqui los botones eliminar -->
 <div class="mt-3 text-center" >
 
   <button class="btn btn-danger" (click)="eliminar()">ELIMINAR</button>
   <button class="btn btn-success" (click)="insertar()">INSERTAR</button>
 
+</div>
+
+<!-- Esto es la pila -->
+<div class="mt-3 text-center" >
+  <h5 class="card-title text-center">Pila de eliminados</h5>
+
+    <ul class="mt-2 list-group" >
+      <li *ngFor="let objeto of pila" class="list-group-item">{{objeto.nombre}}</li>
+    </ul>
 </div>

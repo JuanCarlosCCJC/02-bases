@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 // import { contadorComponent } from './contador/components/contador.component';
-import { ContadorModule } from './contador/components/contador.module';
 
 import { HeroeComponent } from "./heroes/heroe/heroe.component";
 import { InstitutoComponent } from "./Instituto/instituto/instituto.component";
 import { Instituto2Component } from "./Instituto/instituto2/instituto2.component";
 import { ListaComponent } from './heroes/lista/lista.component';
+import { ContadorModule } from './contador/contador.module';
 
 
 @Component({
