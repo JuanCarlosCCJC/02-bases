@@ -18,7 +18,8 @@ import { DbzModule } from './dbz/dbz.module';
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [ContadorModule,HeroesModule,InstitutoComponent,Instituto2Component,DbzModule] //Aqui añado el componente y asi lo puedo usar en el HTML
+  imports: [ContadorModule, HeroesModule, InstitutoComponent, Instituto2Component, DbzModule] //Aqui añado el componente y asi lo puedo usar en el HTML
+ //Aqui añado el componente y asi lo puedo usar en el HTML
  //Aqui añado el componente y asi lo puedo usar en el HTML
 })
 export class AppComponent {
