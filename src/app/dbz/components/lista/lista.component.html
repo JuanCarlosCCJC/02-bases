@@ -1,6 +1,21 @@
 <h4>LISTADO</h4>
     <ul class="list-group">
-        <li class="list-group-item" *ngFor="let personaje of listaPersonajes; let i = index; let esPar=even; let esUltimo=last">
+      <!-- Aqui hemos realizado tod lo explicado en M5.4 NgFor -->
+      <!-- Aqui usamos el NgFor,Material 5.5, lo que hacemos es darle clases a los li según si es primero ultimo o par impar-->
+        <li
+
+        *ngFor="let personaje of listaPersonajes; let i = index; let esPar=even; let esUltimo=last, let esPrimero = first"
+
+        class="list-group-item"
+
+
+        [ngClass]="{
+          'list-group-item-primary' : esPrimero,
+          'list-group-item-secondary' : esPar,
+          'list-group-item-danger' : esUltimo
+        }"
+
+        >
           <span>{{personaje.nombre}} - </span>
           <strong>Fuerza: </strong>
           <span>{{personaje.fuerza}}</span>
