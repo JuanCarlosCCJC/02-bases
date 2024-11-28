@@ -20,6 +20,8 @@ export class AddPersonajeComponent {
 
   public addPersonaje(): void {
 
+    console.log('AddPersonaje');
+
     console.log(this.personaje);
 
     if(this.personaje.nombre.length === 0) return;

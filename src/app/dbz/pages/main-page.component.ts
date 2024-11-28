@@ -28,7 +28,7 @@ public personajes: Personaje[] = [
   // m5.7
   public onNewPersonaje(personaje: Personaje) : void {
 
-    console.log("Main Page")
+    console.log('Main Page')
     console.log(personaje);
 
   }
