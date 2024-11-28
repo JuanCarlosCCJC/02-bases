@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Personaje } from '../../interfaces/personaje.interface';
 
 @Component({
@@ -9,6 +9,10 @@ import { Personaje } from '../../interfaces/personaje.interface';
 })
 export class AddPersonajeComponent {
 
+  // Evento que envia la informacion
+  @Output()
+  public onNewPersonaje: EventEmitter<Personaje> = new EventEmitter();
+
   public personaje : Personaje = {
     nombre:'',
     fuerza: 0
@@ -17,6 +21,15 @@ export class AddPersonajeComponent {
   public addPersonaje(): void {
 
     console.log(this.personaje);
+
+    if(this.personaje.nombre.length === 0) return;
+
+    // Esto es del M5.7
+    this.onNewPersonaje.emit(this.personaje)
+
+    // Hacemos esto para limpiar en en Chrome (M5.7)
+    this.personaje.nombre ='';
+    this.personaje.fuerza - 0
 
   }
 
