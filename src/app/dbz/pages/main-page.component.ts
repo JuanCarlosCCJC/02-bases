@@ -15,6 +15,12 @@ public personajes: Personaje[] = [
   },
   {nombre:"Krillin",
     fuerza:150
+  },
+  {nombre:"Cell",
+    fuerza:150000
+  },
+  {nombre:"Trunks",
+    fuerza:150080
   }
 
 ];
