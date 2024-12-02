@@ -6,7 +6,7 @@
 
         *ngFor="let personaje of listaPersonajes; let i = index; let esPar=even; let esUltimo=last, let esPrimero = first, let esImpar = odd"
 
-        class="list-group-item"
+        class="list-group-item d-flex justify-content-between aling-items-center"
 
 
         [ngClass]="{
@@ -14,13 +14,19 @@
           'list-group-item-success' : esPar,
           'list-group-item-danger' : esImpar,
           'list-group-item-secondary' : esUltimo
-        }"
+        }">
 
-        >
+        <div>
           <span>{{personaje.nombre}} - </span>
           <strong>Fuerza: </strong>
           <span>{{personaje.fuerza}}</span>
           <br>
           <span> Indice:{{i}} - Es Par:{{esPar}} - Es Ultimo:{{esUltimo}} </span>
+        </div>
+
+          <button class="btn btn-danger" (click)="eliminarPersonaje(i)">X</button>       <!-- Pongo el buttom para eliminar-->
+
         </li>
+
+
     </ul>

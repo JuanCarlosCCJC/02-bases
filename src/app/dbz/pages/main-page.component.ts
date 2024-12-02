@@ -25,11 +25,22 @@ public personajes: Personaje[] = [
 
 ];
 
-  // m5.7
+  // m5.7, recojo el presonaje
   public onNewPersonaje(personaje: Personaje) : void {
 
     console.log('Main Page')
     console.log(personaje);
+
+    // Añadimos el personaje recibido. Lo recibimos por tener el Output
+    this.personajes.push(personaje)
+
+  }
+
+  //T5.2 Funcion que elimina
+  public deletePersonaje(numero: number){
+
+    //Eliminamos de la lista
+    this.personajes.splice(numero,1);
 
   }
 

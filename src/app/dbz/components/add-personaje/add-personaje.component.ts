@@ -9,7 +9,7 @@ import { Personaje } from '../../interfaces/personaje.interface';
 })
 export class AddPersonajeComponent {
 
-  // Evento que envia la informacion
+  // Evento que envia la informacion, nos emite un obejeto, en este caso personaje
   @Output()
   public onNewPersonaje: EventEmitter<Personaje> = new EventEmitter();
 
@@ -20,6 +20,9 @@ export class AddPersonajeComponent {
 
   public addPersonaje(): void {
 
+    // M5.8
+    // debugger;
+
     console.log('AddPersonaje');
 
     console.log(this.personaje);
@@ -29,9 +32,15 @@ export class AddPersonajeComponent {
     // Esto es del M5.7
     this.onNewPersonaje.emit(this.personaje)
 
-    // Hacemos esto para limpiar en en Chrome (M5.7)
-    this.personaje.nombre ='';
-    this.personaje.fuerza - 0
+    // Creamos otro personaje en vez de actualizarlo como abajo, asi en los input de Chrome se pone todo por defecto
+    this.personaje = {
+      nombre:'',
+      fuerza:0
+    }
+
+    // Hacemos esto para limpiar en en Chrome (M5.7), si dejamos esto lo quehacemos al enviar el personaje es mandarlo actualizado, por mandarlo por referencia
+    // this.personaje.nombre ='';
+    // this.personaje.fuerza - 0
 
   }
 
