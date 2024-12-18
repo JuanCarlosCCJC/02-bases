@@ -6,22 +6,21 @@ import { Personaje } from '../../interfaces/personaje.interface';
   templateUrl: './lista.component.html',
   styleUrl: './lista.component.css'
 })
+
 export class ListaComponent {
 
   @Input()
-  public listaPersonajes: Personaje[] = [{
-    nombre:"Trunks",
-    fuerza:3500
-  }]
+  public listaPersonajes: Personaje[] = []
 
   // T5.2 Creo el evento donde recibo el numero
   @Output()
-  public onDeletePersonaje: EventEmitter<number> = new EventEmitter();
+  public onDeletePersonaje: EventEmitter<string> = new EventEmitter();
 
-  public eliminarPersonaje(indice:number){
+  //Ya no me hace falta
+  public eliminarPersonajePorId(indiceNumerico:number){
 
-    console.log(this.listaPersonajes[indice]);
-    this.onDeletePersonaje.emit(indice);
+    console.log(this.listaPersonajes[indiceNumerico].id);
+    this.onDeletePersonaje.emit(this.listaPersonajes[indiceNumerico].id);         //Asi emito id en vez del indiceNumerico
 
   }
 

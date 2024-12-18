@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Personaje } from '../../interfaces/personaje.interface';
+import { v4 as uuid } from 'uuid'
 
 @Component({
   selector: 'dbz-add-personaje',
@@ -14,6 +15,7 @@ export class AddPersonajeComponent {
   public onNewPersonaje: EventEmitter<Personaje> = new EventEmitter();
 
   public personaje : Personaje = {
+    id:uuid(),
     nombre:'',
     fuerza: 0
   }
@@ -34,6 +36,7 @@ export class AddPersonajeComponent {
 
     // Creamos otro personaje en vez de actualizarlo como abajo, asi en los input de Chrome se pone todo por defecto
     this.personaje = {
+      id:uuid(),
       nombre:'',
       fuerza:0
     }

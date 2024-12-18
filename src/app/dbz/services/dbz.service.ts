@@ -38,13 +38,14 @@ export class DbzService {
   ];
 
     // m5.7, recojo el presonaje
-    public onNewPersonaje(personaje: Personaje) : void {
+    public onNewPersonaje( personaje: Personaje) : void {
+    // public onNewPersonaje( personaje: Omit<Personaje, 'id'> ) : void {
 
       console.log('Main Page')
       console.log(personaje);
 
       // M5.11
-      const newPersonaje: Personaje = {id:uuid(),...personaje}        // Lo que hacemos es pasar todo y a parte meter el id con el uuid()
+      const newPersonaje: Personaje = {...personaje,id:uuid()}      //Asi aplastamos el id
 
       // Añadimos el personaje recibido. Lo recibimos por tener el Output
       this.personajes.push(newPersonaje)
@@ -58,5 +59,15 @@ export class DbzService {
       this.personajes.splice(numero,1);
 
     }
+
+    //T5.4
+    public deletePersonajePorId(id:string){
+
+      //Lo que hacemos es que filter devuelve una lista según el filtro que le pongamos, si el id del personaje que estamoa iterando no es igual al id pasado por argumento devuelve true, si es igual devuelve false
+      this.personajes = this.personajes.filter(personaje => personaje.id !== id)
+
+    }
+
+
 
 }

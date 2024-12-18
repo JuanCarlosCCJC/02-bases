@@ -5,7 +5,7 @@
 <div class="row">
   <div class="col">
     <!-- Aqui es lo que hago pasarle los datos de la lista que esta en main-component a la que esta en lista-component -->
-    <dbz-lista  [listaPersonajes] = "dbzService.personajes" (onDeletePersonaje)="dbzService.deletePersonaje($event)" ></dbz-lista>
+    <dbz-lista  [listaPersonajes] = "dbzService.personajes" (onDeletePersonaje)="dbzService.deletePersonajePorId($event)" ></dbz-lista>
   </div>
 
   <div class="col">
