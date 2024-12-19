@@ -5,12 +5,12 @@
 <div class="row">
   <div class="col">
     <!-- Aqui es lo que hago pasarle los datos de la lista que esta en main-component a la que esta en lista-component -->
-    <dbz-lista  [listaPersonajes] = "dbzService.personajes" (onDeletePersonaje)="dbzService.deletePersonajePorId($event)" ></dbz-lista>
+    <dbz-lista  [listaPersonajes] = "personajes" (onDeletePersonaje)="deletePersonajePorId($event)" ></dbz-lista>
   </div>
 
   <div class="col">
     <!-- Nos subscrivimos al evento -->
-    <dbz-add-personaje (onNewPersonaje)="dbzService.onNewPersonaje($event)"></dbz-add-personaje>
+    <dbz-add-personaje (onNewPersonaje)="onNewPersonaje($event)"></dbz-add-personaje>
   </div>
 </div>
 

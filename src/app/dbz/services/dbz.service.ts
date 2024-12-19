@@ -64,6 +64,11 @@ export class DbzService {
     public deletePersonajePorId(id:string){
 
       //Lo que hacemos es que filter devuelve una lista según el filtro que le pongamos, si el id del personaje que estamoa iterando no es igual al id pasado por argumento devuelve true, si es igual devuelve false
+      console.log("Se ha eliminado el personaje: " + id);
+
+      console.log("Se ha eliminado el opersonaje: ", this.personajes.find(personaje => personaje.id === id)!.nombre);       //si o si = !
+
+
       this.personajes = this.personajes.filter(personaje => personaje.id !== id)
 
     }

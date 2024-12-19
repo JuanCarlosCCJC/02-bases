@@ -16,11 +16,10 @@ export class ListaComponent {
   @Output()
   public onDeletePersonaje: EventEmitter<string> = new EventEmitter();
 
-  //Ya no me hace falta
-  public eliminarPersonajePorId(indiceNumerico:number){
+  //Lo que emite
+  public eliminarPersonajePorId(id: string){
 
-    console.log(this.listaPersonajes[indiceNumerico].id);
-    this.onDeletePersonaje.emit(this.listaPersonajes[indiceNumerico].id);         //Asi emito id en vez del indiceNumerico
+    this.onDeletePersonaje.emit(id)         //Asi emito id en vez del indiceNumerico
 
   }
 
